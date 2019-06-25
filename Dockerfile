@@ -1,4 +1,4 @@
-FROM FROM alpine:3.10
+FROM alpine:3.10
 
 LABEL "name"="Container Action Template"
 LABEL "maintainer"="GitHub Actions <support+actions@github.com>"
