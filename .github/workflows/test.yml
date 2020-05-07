@@ -1,0 +1,17 @@
+name: Test
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    # test building the container
+    - name: Build the Docker image
+      run: docker build . -t container-action
+    # run test script
+    - name: Test the docker image
+      run: docker run --entrypoint "/bin/sh" container-action /test.sh
+    # E2E run of the container action
+    - uses: ./
+      with: 
+        myInput: "World!!"
