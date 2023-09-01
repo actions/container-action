@@ -48,8 +48,8 @@ jobs:
           INPUT_WHO_TO_GREET: Mona Lisa Octocat
         run: |
           docker run \
-            --env INPUT_WHO_TO_GREET="Mona Lisa Octocat" \
-            --rm ${{ env.TEST_TAG }}
+            --rm ${{ env.TEST_TAG }} \
+            ${{ env.INPUT_WHO_TO_GREET }}
 
   test-action:
     name: GitHub Actions Test
