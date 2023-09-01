@@ -1,12 +1,21 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'The name of your action here'
+description: 'Provide a description here'
+author: 'Your name or organization here'
+
+# Define your inputs here.
 inputs:
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  who-to-greet:
+    description: 'Your input description here'
+    required: true
+    default: 'World'
+
+# Define your outputs here.
+outputs:
+  greeting:
+    description: 'Your output description here'
+
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.who-to-greet }}
