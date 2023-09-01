@@ -5,7 +5,7 @@ on:
     branches:
       - main
   push:
-    branches-ignore:
+    branches:
       - main
 
 jobs:
