@@ -45,10 +45,10 @@ jobs:
       - name: Run the Container
         id: run
         env:
-          INPUT_WHO_TO_GREET: Mona Lisa Octocat
+          INPUT_WHO-TO-GREET: Mona Lisa Octocat
         run: |
           docker run \
-            --env INPUT_WHO_TO_GREET="Mona Lisa Octocat" \
+            --env INPUT_WHO-TO-GREET="Mona Lisa Octocat" \
             --rm ${{ env.TEST_TAG }}
 
   test-action:

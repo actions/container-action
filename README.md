@@ -54,7 +54,7 @@ need to perform some initial setup steps before you can develop your action.
    You can pass individual environment variables using the `--env` or `-e` flag.
 
    ```bash
-   $ docker run --env INPUT_WHO_TO_GREET="Mona Lisa Octocat" actions/container-action
+   $ docker run --env INPUT_WHO-TO-GREET="Mona Lisa Octocat" actions/container-action
 
    ::notice file=entrypoint.sh,line=7::Hello, Mona Lisa Octocat!
    ```
@@ -63,7 +63,7 @@ need to perform some initial setup steps before you can develop your action.
 
    ```bash
    $ cat ./.env.test
-   INPUT_WHO_TO_GREET="Mona Lisa Octocat"
+   INPUT_WHO-TO-GREET="Mona Lisa Octocat"
 
    $ docker run --env-file ./.env.test actions/container-action
 
@@ -90,10 +90,10 @@ container actions:
 - Inputs are accessed using environment variables with the format
   `INPUT_<INPUT_NAME>`. For example, this action has an input called
   `who-to-greet`, which can be accessed in the entrypoint script using
-  `INPUT_WHO_TO_GREET`.
+  `INPUT_WHO-TO-GREET`.
 
   ```bash
-  GREETING="Hello, $INPUT_WHO_TO_GREET!"
+  GREETING="Hello, $INPUT_WHO-TO-GREET!"
   ```
 
 - GitHub Actions supports a number of different workflow commands such as
@@ -140,7 +140,7 @@ So, what are you waiting for? Go ahead and start customizing your action!
 
    ```bash
    docker build -t actions/container-action .
-   docker run --env INPUT_WHO_TO_GREET="Mona Lisa Octocat" actions/container-action
+   docker run --env INPUT_WHO-TO-GREET="Mona Lisa Octocat" actions/container-action
    ```
 
 1. Commit your changes
