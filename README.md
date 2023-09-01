@@ -51,11 +51,20 @@ need to perform some initial setup steps before you can develop your action.
 
 1. :white_check_mark: Test the container
 
-   You can pass input arguments in the `docker run` call.
+   You can pass individual environment variables using the `--env` or `-e` flag.
 
    ```bash
-   $ docker run actions/container-action "Mona Lisa Octocat"
+   $ docker run --env INPUT_WHO_TO_GREET="Mona Lisa Octocat" actions/container-action
+   ::notice file=entrypoint.sh,line=7::Hello, Mona Lisa Octocat!
+   ```
 
+   Or you can pass a file with environment variables using `--env-file`.
+
+   ```bash
+   $ cat ./.env.test
+   INPUT_WHO_TO_GREET="Mona Lisa Octocat"
+
+   $ docker run --env-file ./.env.test actions/container-action
    ::notice file=entrypoint.sh,line=7::Hello, Mona Lisa Octocat!
    ```
 
@@ -76,12 +85,13 @@ can choose any base Docker image and language you like, you can change this to
 suite your needs. There are a few main things to remember when writing code for
 container actions:
 
-- Inputs are accessed using argument identifiers. For example, the first input
+- Inputs are accessed using argument identifiers or environment variables
+  (depending on what you set in your `action.yml`). For example, the first input
   to this action, `who-to-greet`, can be accessed in the entrypoint script using
-  `$1`.
+  the `$INPUT_WHO_TO_GREET` environment variable.
 
   ```bash
-  GREETING="Hello, $1!"
+  GREETING="Hello, $INPUT_WHO_TO_GREET!"
   ```
 
 - GitHub Actions supports a number of different workflow commands such as
