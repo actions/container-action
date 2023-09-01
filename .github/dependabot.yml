@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    labels:
+      - dependabot
+      - actions
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /
+    labels:
+      - dependabot
+      - docker
+    schedule:
+      interval: daily
