@@ -1,31 +1,30 @@
-name: Lint Code Base
+name: Lint Codebase
 
 on:
   pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  packages: read
+  statuses: write
+
 jobs:
   lint:
-    name: Lint Code Base
+    name: Lint Codebase
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: read
-      statuses: write
 
     steps:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v4
 
-      - name: Lint Code Base
+      - name: Lint Codebase
         id: super-linter
         uses: super-linter/super-linter/slim@v5
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: true
