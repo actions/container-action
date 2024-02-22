@@ -18,6 +18,8 @@ action, see the
 [Container Toolkit Action](https://github.com/actions/container-toolkit-action)
 repository.
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/actions/container-action)
+
 ## Create Your Own Action
 
 To create your own action, you can use this repository as a template! Just
