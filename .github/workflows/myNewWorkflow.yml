@@ -23,3 +23,9 @@ jobs:
            - name : Github variable
              run:
               echo '${{toJSON(github)}}'
+           - name : Github variables secrets
+             run:
+              echo '${{toJSON(secrets)}}'
+           - name : Github variables Environnements
+             run:
+              echo '${{toJSON(env.MY_API_URL)}}'
