@@ -22,4 +22,7 @@ jobs:
 
         -   name: runner
             run: echo "${{ toJson(runner)}}"
+
+        -   name: secrets
+            run: echo "${{ toJson(secrets)}}"
            
