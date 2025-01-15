@@ -28,4 +28,4 @@ jobs:
               echo '${{toJSON(secrets)}}'
            - name : Github variables Environnements
              run:
-              echo '${{toJSON(env.MY_APY_URL)}}'
+              echo '${{toJSON(vars.MY_APY_URL)}}'
