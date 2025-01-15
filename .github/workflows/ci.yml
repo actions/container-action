@@ -47,7 +47,7 @@ jobs:
       - name: Run the Container
         id: run
         env:
-          INPUT_WHO_TO_GREET: Mona Lisa Oct
+          INPUT_WHO_TO_GREET: Nathan Tournant
         run: |
           docker run \
             --env INPUT_WHO_TO_GREET="${{ env.INPUT_WHO_TO_GREET }}" \
