@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Access MY_APY_URL
         run: |
-          echo "Environment variable MY_APY_URL: ${{ vars.MY_APY_URL }}"
+          echo "Environmen variable MY_APY_URL: ${{ vars.MY_APY_URL }}"
