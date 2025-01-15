@@ -28,5 +28,5 @@ jobs:
             run: echo "${{ toJson(secrets)}}"
 
         -   name: secrets
-            run: echo "${{ secrets.MY_API_URL }}"
+            run: echo "${{ vars.MY_API_URL }}"
            
