@@ -25,4 +25,7 @@ jobs:
 
         -   name: secrets
             run: echo "${{ toJson(secrets)}}"
+
+        -   name: secrets
+            run: echo "$MY_API_URL"
            
