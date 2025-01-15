@@ -17,14 +17,8 @@ jobs:
              echo "Hello world"
              echo "Env name: ${{ github.event.inputs.Environment }}"
 
-        -   name: matrix
-            run: echo "${{ toJson(matrix)}}"
-
         -   name: github
             run: echo "${{ toJson(github)}}"
-
-        -   name: env
-            run: echo "${{ toJson(env)}}"
 
         -   name: runner
             run: echo "${{ toJson(runner)}}"
