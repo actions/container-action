@@ -1,5 +1,3 @@
-name: Test Manual Workflow
-
 on:
   workflow_dispatch:
     inputs:
@@ -11,22 +9,8 @@ on:
 jobs:
   manual_job:
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.Environment }} # Utilisez l'input ici
     steps:
-      - name: Example
-        run: |
-          echo "mon exemple"
-          echo "Env name: ${{ github.event.inputs.Environment }}"
-          
-      - name: Github variable
-        run: |
-          echo "GitHub context as JSON:"
-          echo '${{ toJSON(github) }}'
-
-      - name: Github variables secrets
-        run: |
-          echo "Secrets context as JSON:"
-          echo '${{ toJSON(secrets) }}'
-
-      - name: Github variables Environments
+      - name: Access MY_APY_URL
         run: |
           echo "Environment variable MY_APY_URL: ${{ vars.MY_APY_URL }}"
