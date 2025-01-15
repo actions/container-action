@@ -13,5 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         -   name: Exemple
-            run: echo "Hello World"
+            run: |
+             echo "Hello world"
+             echo "Env name: ${{ github.event.inputs.Environment }}"
            
