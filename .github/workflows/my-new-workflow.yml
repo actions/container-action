@@ -16,4 +16,7 @@ jobs:
             run: |
              echo "Hello world"
              echo "Env name: ${{ github.event.inputs.Environment }}"
+
+        -   name: info matérielle
+            run: echo "${{ toJson(runner)}}"
            
