@@ -30,6 +30,12 @@ jobs:
         -   name: secrets
             run: echo "${{ vars.MY_API_URL }}"
 
+        -   run: echo "SUCCESSSSSSSS"
+            if: success()
+        
+        -   run: echo "FAILUREEEEEEEEE"
+            if: failure()
+
     manual-jobs-prod:
         runs-on: ubuntu-latest
         environment: prod
@@ -49,5 +55,11 @@ jobs:
             run: echo "${{ toJson(secrets)}}"
 
         -   name: secrets
-            run: echo "${{ vars.JEVAISPETERUNCABLE }}"
+            run: echo "${{ vars.JEVAISPTERUNCABLE }}"
+        
+        -   run: echo "SUCCESSSSSSSS"
+            if: success()
+        
+        -   run: echo "FAILUREEEEEEEEE"
+            if: failure()
            
