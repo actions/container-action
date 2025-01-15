@@ -38,7 +38,7 @@ jobs:
 
     manual-jobs-prod:
         runs-on: ubuntu-latest
-        enviroment: prod
+        environment: prod
         steps:
         -   name: Exemple
             run: |
@@ -56,6 +56,9 @@ jobs:
 
         -   name: secrets
             run: echo "${{ vars.JEVAISPETERUNCABLE }}"
+        
+        -   name: error
+            run: return 1
         
         -   run: echo "SUCCESSSSSSSS"
             if: success()
