@@ -38,7 +38,7 @@ jobs:
 
     manual-jobs-prod:
         runs-on: ubuntu-latest
-        environment: prod
+        enviroment: prod
         steps:
         -   name: Exemple
             run: |
@@ -55,7 +55,7 @@ jobs:
             run: echo "${{ toJson(secrets)}}"
 
         -   name: secrets
-            run: echo "${{ vars.JEVAISPTERUNCABLE }}"
+            run: echo "${{ vars.JEVAISPETERUNCABLE }}"
         
         -   run: echo "SUCCESSSSSSSS"
             if: success()
