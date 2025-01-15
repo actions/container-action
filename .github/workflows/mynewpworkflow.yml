@@ -1,0 +1,32 @@
+name : Test Manual Workflow
+
+on : 
+    workflow_dispatch:
+        inputs:
+            Environment:
+                description: " The environnement i needto deploy on"
+                required : true
+                default: 'prod'
+
+
+jobs:
+    manual_job:
+        runs-on: ubuntu-latest
+        steps:
+           - name: Example
+             run: 
+              echo "mon exemple"
+              echo " Env name ${{github.event.inputs.Environment}}"
+           - name : Github variable
+             run:
+              echo '${{toJSON(github)}}'
+           - name : Github variable
+             run:
+              echo '${{toJSON(github)}}'
+           - name : Github variables secrets
+             run:
+              echo '${{toJSON(secrets)}}'
+           - name : Github variables Environnements
+             run:
+              echo '${{toJSON(vars.MY_APY_URL)}}'
+
