@@ -6,7 +6,7 @@ on :
             Environment:
                 description: " The environnement i needto deploy on"
                 required : true
-                default: '/dev'
+                default: 'dev'
 
 
 jobs:
