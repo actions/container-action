@@ -1,22 +1,15 @@
-# Container Action Template
+# Create a Container Action
 
 [![GitHub Super-Linter](https://github.com/actions/container-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
+[![Check dist/](https://github.com/actions/container-action/actions/workflows/check-dist.yml/badge.svg)](https://github.com/actions/container-action/actions/workflows/check-dist.yml)
 ![CI](https://github.com/actions/container-action/actions/workflows/ci.yml/badge.svg)
+[![CodeQL](https://github.com/actions/container-action/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/actions/container-action/actions/workflows/codeql-analysis.yml)
+[![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
 Use this template to bootstrap the creation of a container action. :rocket:
 
 This template includes compilation support, tests, a validation workflow,
 publishing, and versioning guidance.
-
-If you are new, there's also a simpler introduction in the
-[Hello World Docker Action](https://github.com/actions/hello-world-docker-action)
-repository.
-
-If you would like to use the
-[GitHub Actions Toolkit](https://github.com/actions/toolkit) in your container
-action, see the
-[Container Toolkit Action](https://github.com/actions/container-toolkit-action)
-repository.
 
 ## Create Your Own Action
 
@@ -166,7 +159,7 @@ So, what are you waiting for? Go ahead and start customizing your action!
 Your action is now published! :rocket:
 
 For information about versioning your action, see
-[Versioning](https://github.com/actions/toolkit/blob/master/docs/action-versioning.md)
+[Versioning](https://github.com/actions/toolkit/blob/main/docs/action-versioning.md)
 in the GitHub Actions toolkit.
 
 ## Validate the Action
@@ -179,7 +172,7 @@ action in the same repository.
 steps:
   - name: Checkout
     id: checkout
-    uses: actions/checkout@v3
+    uses: actions/checkout@v4
 
   - name: Test Local Action
     id: test-action
@@ -199,7 +192,7 @@ For example workflow runs, check out the
 
 After testing, you can create version tag(s) that developers can use to
 reference different stable versions of your action. For more information, see
-[Versioning](https://github.com/actions/toolkit/blob/master/docs/action-versioning.md)
+[Versioning](https://github.com/actions/toolkit/blob/main/docs/action-versioning.md)
 in the GitHub Actions toolkit.
 
 To include the action in a workflow in another repository, you can use the
@@ -210,7 +203,7 @@ hash.
 steps:
   - name: Checkout
     id: checkout
-    uses: actions/checkout@v3
+    uses: actions/checkout@v4
 
   - name: Test Local Action
     id: test-action
