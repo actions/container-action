@@ -1,7 +1,7 @@
 # Create a Container Action
 
-[![GitHub Super-Linter](https://github.com/actions/container-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
 ![Continuous Integration](https://github.com/actions/container-action/actions/workflows/ci.yml/badge.svg)
+![Linter](https://github.com/actions/container-action/actions/workflows/linter.yml/badge.svg)
 
 Use this template to bootstrap the creation of a container action. :rocket:
 
