@@ -1,5 +1,5 @@
 # Set the base image to use for subsequent instructions
-FROM alpine:3.23
+FROM alpine:3.24
 
 # Set the working directory inside the container
 WORKDIR /usr/src
